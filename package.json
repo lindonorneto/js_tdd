@@ -1,0 +1,24 @@
+{
+  "name": "javascript_tdd",
+  "version": "1.0.0",
+  "description": "curso js_tdd",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Lindonor Neto <netoespl@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.7.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "husky": "^0.14.3"
+  }
+}
