@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    const article = {
+        title: 'Aprendendo template string',
+        intro: 'Uma explicação de como usar template strings do es6 em seu codigo',
+        body: 'Sit officia eiusmod fugiat irure nisi non ad officia laborum pariatur laboris. Amet non pariatur mollit officia duis duis proident velit elit incididunt commodo ad do veniam. Consectetur anim pariatur esse mollit Lorem incididunt aute occaecat.',
+        tags: ['es6', 'js', 'template-literal'],
+        author: 'Neto'
+    };
+
+    function renderAuthor(nome) {
+        return (nome) ? nome : 'unknow';
+    }
+    const markup = `
+        <article>
+            <header>
+                <h1>${article.title}</h1>
+            </header>
+            <section>
+                <p>${article.intro}</p>
+            </section>
+            <footer>
+                <ul>
+                    ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+                </ul>
+                <p>Author: ${renderAuthor(article.author)}</p>
+            </footer>
+        </article>
+    `;
+    document.body.innerHTML = markup;
+</script>
+</html>

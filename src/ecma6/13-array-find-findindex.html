@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    const data = [
+        {
+            name: 'Neto',
+            age: 27,
+            city: 'Salvador'
+        },
+        {
+            name: 'Lindonor',
+            age: 23,
+            city: 'Alagoinhas'
+        }
+    ];
+    // const sampleArray = [4, -5, 0];
+    // const underZero = sampleArray.find(x => x < 0);
+    // const underZeroIndex = sampleArray.findIndex(x => x < 0);
+    // console.log(underZero);
+    // console.log(underZeroIndex);
+
+    const neto = data.find(person => person.name === 'Neto');
+    const netoIndex = data.findIndex(person => person.name === 'Lindonor');
+    console.log(neto);
+    console.log(netoIndex);
+</script>
+</html>

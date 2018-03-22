@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var data = {
+        name: 'Neto',
+        surname: 'Almeida',
+        age: 27,
+        blog: 'teste.com.br',
+        social: {
+            twitter: 'neto',
+            facebook: '/netoalmeida'
+        }
+    };
+    // const name = data.name;
+    // const surname = data.surname;
+    // const twitter = data.social.twitter;
+
+    // console.log(name);
+    // console.log(surname);
+    // console.log(twitter);
+
+    const {name, surname} = data;
+    console.log(name);
+    console.log(surname);
+
+    const {facebook, twitter} = data.social;
+    console.log(facebook);
+    console.log(twitter);
+
+    const {facebook:fb} = data.social;
+    console.log(fb);
+
+    const {city='Dublin'} = data; //valor default dublin
+    console.log(city);
+</script>
+</html>

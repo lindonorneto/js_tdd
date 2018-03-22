@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    const currency = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({currency: 'euro', value: 3.50});
+        }, 2000);
+    });
+    const country = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(['Ireland', 'England', 'Scoutland']);
+        }, 600);
+    });
+
+    // Promise
+    //     .all([currency, country])
+    //     .then(responses => {
+    //         console.log(responses);
+    //     });
+
+    Promise
+        .race([currency, country])
+        .then(responses => {
+            console.log(responses);
+        });
+</script>
+</html>
